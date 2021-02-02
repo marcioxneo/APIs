@@ -9,7 +9,7 @@ req.query({
 })
 
 req.headers({
-  "x-rapiapi-key": "4dc8750479msha45ae72669ae3bfp18bd84jsnfcf64c26bdd9",
+  "x-rapiapi-key": imdbKey,
   "x-rapidapi-host":"movie-database-imdb-alternative.p.rapidapi.com",
   "useQueryString":true 
 })

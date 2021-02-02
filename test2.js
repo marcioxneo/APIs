@@ -1,11 +1,12 @@
 const request = require('request')
+const imdbKey = require('./credencials/imdb.json').apiKey
 
 const options = {
   method: 'GET',
   url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
   qs: {s:'Avengers Endgame', page: '1', r: 'json'},
   headers: {
-    'x-rapidapi-key': '4dc8750479msha45ae72669ae3bfp18bd84jsnfcf64c26bdd9',
+    'x-rapidapi-key': imdbKey,
     'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com',
     useQueryString:true
   }
