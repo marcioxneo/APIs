@@ -1,12 +1,21 @@
+import Link from 'next/link';
+//import Control from '../control.js'
+
 function Home(){
   return <div>
+    {/* ${title = control.title} */}
     <h1>Escolha um Filme</h1>
     <div>
-      <a href="view" >
-        Avengers Endgame
-      </a>
+      <Link href="/view" >
+        <a>
+          {/* ${title} */}
+          teste
+        </a>
+      </Link>
     </div>
   </div>
 }
+
+
 
 export default Home
