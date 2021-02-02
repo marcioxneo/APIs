@@ -1,5 +1,5 @@
 const unirest = require("unirest")
-const imdbKey = require("../APIs/credencials/imdb.json").apiKey
+const imdbKey = require("../APIs/credentials/imdb.json").apiKey
 var req = unirest("GET", "https://movie-database-imdb-alternative.p.rapidapi.com/")
 
 req.query({

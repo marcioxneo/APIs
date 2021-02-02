@@ -21,6 +21,7 @@
     "next": "^10.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "readline-sync": "^1.4.10",
     "request": "^2.88.2",
     "unirest": "^0.6.0"
   }

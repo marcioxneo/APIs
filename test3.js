@@ -1,5 +1,5 @@
 const request = require('request');
-const imdbKey = require('./credencials/imdb.json').apiKey
+const imdbKey = require('./credentials/imdb.json').apiKey
 
 const options = {
   method: 'GET',

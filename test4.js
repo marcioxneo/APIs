@@ -1,22 +1,25 @@
 const request = require('request')
+const readline = require('readline-sync')
 const fs = require('fs')
-const contentFilePath = './content/list.json'
-const omdbKey = require('./credencials/omdb.json').apiKey
+const contentFilePath = './content/'
+const omdbKey = require('./credentials/omdb.json').apiKey
+
+const busca = readline.question('Digite o nome do Filme/Serie:')
 
 const options = {
   method: 'GET',
   url: 'http://www.omdbapi.com/',
-  qs: {t:'Avengers Endgame',apikey: omdbKey, r: 'json'}
+  qs: {t: busca ,apikey: omdbKey, r: 'json'}
 }
 
 request(options, function(error, response, body) {
   if(error) throw new Error(error)
 
-  //const res = JSON.stringify(body)
-  //fs.writeFileSync(contentFilePath,body) 
+  const res = JSON.stringify(body)
+  fs.writeFileSync(contentFilePath+`/${busca}.json`,body) 
 
   function load() {
-    const fileBuffer = fs.readFileSync(contentFilePath, 'utf-8')
+    const fileBuffer = fs.readFileSync(contentFilePath+`/${busca}.json`, 'utf-8')
     const contentJson = JSON.parse(fileBuffer)
     //const objJson = Object.keys(contentJson)
     return contentJson
